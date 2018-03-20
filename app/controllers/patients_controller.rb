@@ -24,8 +24,6 @@ class PatientsController < ApplicationController
   # POST /patients
   # POST /patients.json
   def create
-    @u = User.find_by(email: patient_params[:email])
-    patient_params[:user_id] = @u.id
     @patient = Patient.new(patient_params)
 
     respond_to do |format|
