@@ -40,6 +40,7 @@
     <%= f.label :address %>
     <%= f.text_field :address %>
   </div>
+    <%= f.hidden_field :user_id, value: User.find_by(:email => params[:email]).id %>
 
   <div class="actions">
     <%= f.submit %>
